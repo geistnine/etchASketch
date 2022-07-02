@@ -1,13 +1,10 @@
 #gridcontainer {
+    height: 500px;
+    width: 500px;
     display: grid;
-    grid-template-columns: repeat(16, 30px);
-    grid-template-rows: repeat(16, 30px);
-    justify-content: center;
 }
 
 .square {
-    border-radius: 3px;
     border-color: aqua;
     border-style: solid;
-    padding-bottom: 100%;
 }
