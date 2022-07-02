@@ -9,12 +9,13 @@ document.addEventListener("mouseup", function(){
 
 function populateBoard(size) {
     let board = document.querySelector("#gridcontainer");
+    board.innerHTML="";
     board.style.gridTemplateColumns = `repeat(${size}, 1fr)`;
     board.style.gridTemplateRows = `repeat(${size}, 1fr)`;
     for (let i=0; i < size ** 2; i++){
         let box = document.createElement('div');
         box.className = "square";
-        box.style.backgroundColor = "blue";
+        box.style.backgroundColor = "gray";
         box.addEventListener("mouseover", function(){
             if (LMBdown){
                 box.style.backgroundColor = "red";
