@@ -31,6 +31,17 @@ button.addEventListener('click', function(){
     populateBoard(input.value);
 });
 
+let colorButton = document.querySelector("#colorButton");
+colorButton.addEventListener('click', function(){
+    let input = document.getElementById("inputColor");
+    let gridSquares = document.querySelectorAll(".square");
+    gridSquares.forEach(function(item){
+        item.addEventListener('mouseover', function(){
+            if (LMBdown) item.style.backgroundColor = input.value;
+        })
+    });
+    console.log(input.value);
+});
 
 // need a reset functionality
 
