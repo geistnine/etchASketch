@@ -32,5 +32,5 @@ button.addEventListener('click', function(){
 });
 
 
-// want to make it so hover on grid is instead mousedown 
+// need a reset functionality
 

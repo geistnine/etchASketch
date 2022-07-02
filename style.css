@@ -2,14 +2,31 @@
     height: 500px;
     width: 500px;
     display: grid;
+    border-style: solid;
+
 }
 
 .container {
     display: flex;
     justify-content: center;
+    padding-top: 24px;
+    padding-bottom: 24px;
 }
 
-.square {
-    /* border-color: aqua;
-    border-style: solid; */
+.header {
+    display: flex;
+    justify-content: center;
+    background-color:darkgray;
+    padding: 16px;
+}
+
+body {
+    margin: 0px;
+}
+
+.buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
 }
