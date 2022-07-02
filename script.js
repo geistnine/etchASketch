@@ -1,5 +1,11 @@
+let LMBdown = false;
 
-
+document.addEventListener("mousedown", function(){
+    LMBdown = true;
+});
+document.addEventListener("mouseup", function(){
+    LMBdown = false;
+})
 
 function populateBoard(size) {
     let board = document.querySelector("#gridcontainer");
@@ -9,8 +15,10 @@ function populateBoard(size) {
         let box = document.createElement('div');
         box.className = "square";
         box.style.backgroundColor = "blue";
-        box.addEventListener("mouseenter", function(){
-            box.style.backgroundColor = "red";
+        box.addEventListener("mouseover", function(){
+            if (LMBdown){
+                box.style.backgroundColor = "red";
+            }
         });
         board.insertAdjacentElement("beforeend", box);
     }
@@ -23,4 +31,6 @@ button.addEventListener('click', function(){
     populateBoard(input.value);
 });
 
+
+// want to make it so hover on grid is instead mousedown 
 
