@@ -8,6 +8,10 @@ document.addEventListener("mouseup", function(){
 })
 
 function populateBoard(size) {
+    if (size >= 100 || size < 0) {
+        alert("Please enter a number between 1 and 100!");
+        return;
+    }
     let board = document.querySelector("#gridcontainer");
     board.innerHTML="";
     board.style.gridTemplateColumns = `repeat(${size}, 1fr)`;
@@ -41,8 +45,4 @@ colorButton.addEventListener('click', function(){
             if (LMBdown) item.style.backgroundColor = input.value;
         })
     });
-    console.log(input.value);
 });
-
-// need a reset functionality
-
