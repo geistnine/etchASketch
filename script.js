@@ -16,6 +16,11 @@ function populateBoard(size) {
     }
 }
 
-populateBoard(32);
+// eventlister for button click that calls populateboard using input size
+let button = document.querySelector("#gridbutton");
+button.addEventListener('click', function(){
+    let input = document.getElementById("inputSize")
+    populateBoard(input.value);
+});
 
 
